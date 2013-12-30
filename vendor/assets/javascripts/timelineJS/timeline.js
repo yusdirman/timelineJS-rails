@@ -286,7 +286,7 @@ if (typeof VMM == 'undefined') {
 
 			valid = true;
 
-			ce += "<img src='" + media + "'>";
+			ce += media;
 
 			// CREDIT
 			if (credit != null && credit != "") {
