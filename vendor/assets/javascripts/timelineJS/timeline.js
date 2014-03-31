@@ -355,19 +355,19 @@ Array.prototype.remove = function(from, to) {
 	var rest = this.slice((to || from) + 1 || this.length);
 	this.length = from < 0 ? this.length + from : from;
 	return this.push.apply(this, rest);
-}
+};
 /* Extending Date to include Week
  ================================================== */
 Date.prototype.getWeek = function() {
 	var onejan = new Date(this.getFullYear(), 0, 1);
 	return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 1) / 7);
-}
+};
 /* Extending Date to include Day of Year
  ================================================== */
 Date.prototype.getDayOfYear = function() {
 	var onejan = new Date(this.getFullYear(), 0, 1);
 	return Math.ceil((this - onejan) / 86400000);
-}
+};
 /* A MORE SPECIFIC TYPEOF();
 //	http://rolandog.com/archives/2007/01/18/typeof-a-more-specific-typeof/
 ================================================== */
@@ -454,7 +454,7 @@ if ( typeof VMM != 'undefined') {
 			if (jQuery(window).scrollTop() != VMM.Lib.offset(elem).top) {
 				VMM.Lib.animate('html,body', _duration, _ease, {
 					scrollTop : VMM.Lib.offset(elem).top
-				})
+				});
 			}
 
 		}
@@ -581,13 +581,13 @@ if ( typeof VMM != 'undefined') {
 
 			}
 		}
-	}
+	};
 
 	VMM.parseJSON = function(the_json) {
 		if ( typeof (jQuery ) != 'undefined') {
 			return jQuery.parseJSON(the_json);
 		}
-	}
+	};
 	// ADD ELEMENT AND RETURN IT
 	VMM.appendAndGetElement = function(append_to_element, tag, cName, content) {
 		var e, _tag = "<div>", _class = "", _content = "", _id = "";
@@ -948,7 +948,7 @@ if ( typeof VMM != 'undefined') {
 			}
 
 		}
-	}
+	};
 }
 
 if ( typeof (jQuery ) != 'undefined') {
@@ -1180,7 +1180,7 @@ if ( typeof VMM != 'undefined' && typeof VMM.Browser == 'undefined') {
 			identity : "Linux"
 		}]
 
-	}
+	};
 	VMM.Browser.init();
 }
 
@@ -1204,7 +1204,7 @@ if ( typeof VMM != 'undefined' && typeof VMM.FileExtention == 'undefined') {
 			}
 			return flag;
 		}
-	}
+	};
 }
 
 /* **********************************************
@@ -4263,13 +4263,13 @@ if ( typeof VMM != 'undefined' && typeof VMM.MediaElement == 'undefined') {
 			var _w = 16, _h = 24, _uid = "";
 
 			if (w != null && w != "") {
-				_w = w
+				_w = w;
 			};
 			if (h != null && h != "") {
-				_h = h
+				_h = h;
 			};
 			if (uid != null && uid != "") {
-				_uid = uid
+				_uid = uid;
 			};
 
 			if (data.media != null && data.media != "") {
@@ -4612,7 +4612,7 @@ if ( typeof VMM != 'undefined' && typeof VMM.MediaType == 'undefined') {
 			trace(d.match(/src\=([^\s]*)\s/)[1].split(/"/)[1]);
 			media.id = d.match(/src\=([^\s]*)\s/)[1].split(/"/)[1];
 			success = true;
-		} else if (d.match('<img')) {
+		} else if (d.match('img')) {
 			media.type = "html";
 			media.id = d;
 			success = true;
@@ -5016,7 +5016,7 @@ if ( typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			} else {
 				return config.slider.width;
 			}
-		}
+		};
 
 		this.height = function(h) {
 			if (h != null && h != "") {
@@ -5025,7 +5025,7 @@ if ( typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			} else {
 				return config.slider.height;
 			}
-		}
+		};
 		/* GETTERS AND SETTERS
 		 ================================================== */
 		this.setData = function(d) {
@@ -5047,7 +5047,7 @@ if ( typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			} else {
 				trace("NO CONFIG DATA");
 			}
-		}
+		};
 
 		this.getConfig = function() {
 			return config;
@@ -5064,7 +5064,7 @@ if ( typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 				reSize();
 			}
 
-		}
+		};
 
 		this.active = function() {
 			return _active;
@@ -5088,10 +5088,10 @@ if ( typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			var _go_to_slide = true, _from_start = false;
 
 			if (go_to_slide != null) {
-				_go_to_slide = go_to_slide
+				_go_to_slide = go_to_slide;
 			};
 			if (from_start != null) {
-				_from_start = from_start
+				_from_start = from_start;
 			};
 
 			current_width = config.slider.width;
